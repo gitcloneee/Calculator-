@@ -416,6 +416,14 @@
                     tax = (400000 * 0.05) + (400000 * 0.10) + (400000 * 0.15) + (400000 * 0.20) + (400000 * 0.25) + (income - 2400000) * 0.30;
                 }
 
+                // Reabate us87a
+                if (income <= 1200000) {
+                    rebate = basetax
+                } else if (income > 1200000) {
+                    rebate = 0
+                }
+                    
+
                 // Surcharge for New Regime
                 if (income > 20000000) {
                     surcharge = tax * 0.25; // 25% surcharge for income above 2 crore
